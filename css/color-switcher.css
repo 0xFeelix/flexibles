@@ -1,0 +1,787 @@
+/*Panel color switcher*/
+.color-panel{
+    position: fixed;
+    left: -200px;
+    top: 30%;
+    border-radius: 0 5px 5px 0;
+    background: #fff;
+    border: 1px solid #d4d4d4;
+    min-height: 22%;
+    width: 200px;
+    color: #fff;
+    z-index: 9999;
+    padding: 20px;
+}
+.cog-panel-switcher{
+    position: fixed;
+    left: 0%;
+    top: 20%;
+    background: #fff;
+    font-size: 18px;
+    border: 1px solid #d4d4d4;
+    border-radius: 0 5px 5px 0;
+    z-index: 100;
+    outline: 0;
+    transition: all .2s linear;
+    transform: translateZ(0);
+    cursor: pointer;
+}
+.color-panel .fa-cog{
+    color: #252525;
+    transition: .4s ease all;
+    padding: 10px 10px;
+
+}
+.cog-panel-switcher .fa-cog:hover{
+    transform: rotate(360deg);
+}
+/*Current color*/
+.current-color:before{
+    content: '\2714';
+    font-family: FontAwesome;
+    position: relative;
+    top: 7px;
+    left: 9px ;
+    color: #fff;
+}
+/*Change colors*/
+.change-colors h3{
+    text-align: center;
+    font-size: 16px;
+    color: #515151;
+    font-family: Roboto-regular;
+    margin-bottom: 20px;
+}
+.change-colors ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.change-colors ul li{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.change-colors [data-color='green']{
+    background: #009688;
+}
+.change-colors [data-color='yellow']{
+    background: #F9A825;
+}
+.change-colors [data-color='red']{
+    background: #B71C1C;
+}
+.change-colors [data-color='blue']{
+    background: #1A237E;
+}
+.change-colors [data-color='brown']{
+    background: #3E2723;
+}
+.change-colors [data-color='purple']{
+    background: #6A1B9A;
+}
+.change-colors [data-color='purple2']{
+    background: #311B92;
+}
+.change-colors [data-color='teal']{
+    background: #20504F;
+}
+.change-colors [data-color='red2']{
+    background: #F44336;
+}
+.change-colors [data-color='umber']{
+    background: #5D5042;
+}
+.change-colors [data-color='rich']{
+    background: #0D0E14;
+}
+.change-colors [data-color='orange']{
+    background: #FF5722;
+}
+
+/*Skin transitions*/
+.skin-color, .skin-background, .navigation a:after{
+  transition: 1s ease all;
+}
+
+                            /********************
+                                    COLORS
+                            ********************/
+
+/************************************GREEN*******************************************/
+[data-default-color='green'] .skin-color{
+    color: #009688 !important;
+}
+[data-default-color='green'] .skin-background{
+    background: #009688 !important;
+}
+[data-default-color='green'] .navigation a:after{
+    background: #009688 !important;
+}
+                         /*timeline*/
+[data-default-color='green'] .timeline-content{
+    border-left: 2px solid #009688 !important;
+}
+[data-default-color='green'] .timeline-content:before{
+    border: 2px solid #009688 !important;
+}
+[data-default-color='green'] .timeline-content:after{
+    background: #009688 !important;
+}
+                        /*animate-progress*/
+[data-default-color='green'] .animate-progress span{
+    background: #009688 !important;
+}
+
+[data-default-color='green'] .is-focused [class^=bmd-label] {
+    color: #009688;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='green'] .cd-close:hover{
+    color: #009688;
+    border-color: #009688;
+}
+
+[data-default-color='green'] .cd-item > a b{
+    border-color: #009688;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='green'] .carousel-indicators li.active{
+    background: #009688 !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='green'] .share-buttons i:hover{
+    background: #009688;
+    border-color: #009688;
+}
+
+                        /* Form-cotrol */
+[data-default-color='green'] .form-control{
+    background-image: linear-gradient(0deg,#009688 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+
+
+/************************************YELLOW*******************************************/
+[data-default-color='yellow'] .skin-color{
+    color: #FFC528 !important;
+}
+
+[data-default-color='yellow'] .skin-background{
+    background: #FFC528 !important;
+}
+[data-default-color='yellow'] .navigation a:after{
+    background: #FFC528 !important;
+}
+                        /*timeline*/
+[data-default-color='yellow'] .timeline-content{
+    border-left: 2px solid #F9A825 !important;
+}
+[data-default-color='yellow'] .timeline-content:before{
+    border: 2px solid #F9A825 !important;
+}
+[data-default-color='yellow'] .timeline-content:after{
+    background: #F9A825 !important;
+}
+                        /*animate-progress*/
+[data-default-color='yellow'] .animate-progress span{
+    background: #F9A825 !important;
+}
+
+[data-default-color='yellow'] .is-focused [class^=bmd-label] {
+    color: #F9A825;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='yellow'] .cd-close:hover{
+    color: #F9A825;
+    border-color: #F9A825;
+}
+[data-default-color='yellow'] .cd-item > a b{
+    border-color: #F9A825;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='yellow'] .carousel-indicators li.active{
+    background: #F9A825 !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='yellow'] .share-buttons i:hover{
+    background: #F9A825;
+    border-color: #F9A825;
+}
+                        /* Form-cotrol */
+[data-default-color='yellow'] .form-control{
+background-image: linear-gradient(0deg,#F9A825 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+
+
+
+
+
+/************************************RED*******************************************/
+[data-default-color='red'] .skin-color{
+    color: #B71C1C !important;
+}
+[data-default-color='red'] .skin-background{
+    background: #B71C1C !important;
+}
+[data-default-color='red'] .navigation a:after{
+    background: #B71C1C !important;
+}
+                        /*timeline*/
+[data-default-color='red'] .timeline-content{
+    border-left: 2px solid #B71C1C !important;
+}
+[data-default-color='red'] .timeline-content:before{
+    border: 2px solid #B71C1C !important;
+}
+[data-default-color='red'] .timeline-content:after{
+    background: #B71C1C !important;
+}
+                        /*animate-progress*/
+[data-default-color='red'] .animate-progress span{
+    background: #B71C1C !important;
+}
+
+[data-default-color='red'] .is-focused [class^=bmd-label] {
+    color: #B71C1C;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='red'] .cd-close:hover{
+    color: #B71C1C;
+    border-color: #B71C1C;
+}
+[data-default-color='red'] .cd-item > a b{
+    border-color: #B71C1C;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='red'] .carousel-indicators li.active{
+    background: #B71C1C !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='red'] .share-buttons i:hover{
+    background: #B71C1C;
+    border-color: #B71C1C;
+}
+
+                          /* Form-cotrol */
+[data-default-color='red'] .form-control{
+background-image: linear-gradient(0deg,#B71C1C 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+
+
+/************************************BLUE*******************************************/
+[data-default-color='blue'] .skin-color{
+    color: #1A237E !important;
+}
+[data-default-color='blue'] .skin-background{
+    background: #1A237E !important;
+}
+[data-default-color='blue'] .navigation a:after{
+    background: #1A237E !important;
+}
+                        /*timeline*/
+[data-default-color='blue'] .timeline-content{
+    border-left: 2px solid #1A237E !important;
+}
+[data-default-color='blue'] .timeline-content:before{
+    border: 2px solid #1A237E !important;
+}
+[data-default-color='blue'] .timeline-content:after{
+    background: #1A237E !important;
+}
+                        /*animate-progress*/
+[data-default-color='blue'] .animate-progress span{
+    background: #1A237E !important;
+}
+
+[data-default-color='blue'] .is-focused [class^=bmd-label] {
+    color: #1A237E;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='blue'] .cd-close:hover{
+    color: #1A237E;
+    border-color: #1A237E;
+}
+[data-default-color='blue'] .cd-item > a b{
+    border-color: #1A237E;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='blue'] .carousel-indicators li.active{
+    background: #1A237E !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='blue'] .share-buttons i:hover{
+    background: #1A237E;
+    border-color: #1A237E;
+}
+
+                        /* Form-cotrol */
+[data-default-color='blue'] .form-control{
+background-image: linear-gradient(0deg,#1A237E 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+
+
+/************************************BROWN*******************************************/
+[data-default-color='brown'] .skin-color{
+    color: #3E2723 !important;
+}
+[data-default-color='brown'] .skin-background{
+    background: #3E2723 !important;
+}
+[data-default-color='brown'] .navigation a:after{
+    background: #3E2723 !important;
+}
+                        /*timeline*/
+[data-default-color='brown'] .timeline-content{
+    border-left: 2px solid #3E2723 !important;
+}
+[data-default-color='brown'] .timeline-content:before{
+    border: 2px solid #3E2723 !important;
+}
+[data-default-color='brown'] .timeline-content:after{
+    background: #3E2723 !important;
+}
+                        /*animate-progress*/
+[data-default-color='brown'] .animate-progress span{
+    background: #3E2723 !important;
+}
+
+[data-default-color='brown'] .is-focused [class^=bmd-label] {
+    color: #3E2723;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='brown'] .cd-close:hover{
+    color: #3E2723;
+    border-color: #3E2723;
+}
+[data-default-color='brown'] .cd-item > a b{
+    border-color: #3E2723;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='brown'] .carousel-indicators li.active{
+    background: #3E2723 !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='brown'] .share-buttons i:hover{
+    background: #3E2723;
+    border-color: #3E2723;
+}
+
+                        /* Form-cotrol */
+[data-default-color='brown'] .form-control{
+background-image: linear-gradient(0deg,#3E2723 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+
+
+
+
+
+/************************************PURPLE*******************************************/
+[data-default-color='purple'] .skin-color{
+    color: #6A1B9A !important;
+}
+[data-default-color='purple'] .skin-background{
+    background: #6A1B9A !important;
+}
+[data-default-color='purple'] .navigation a:after{
+    background: #6A1B9A !important;
+}
+                        /*timeline*/
+[data-default-color='purple'] .timeline-content{
+    border-left: 2px solid #6A1B9A !important;
+}
+[data-default-color='purple'] .timeline-content:before{
+    border: 2px solid #6A1B9A !important;
+}
+[data-default-color='purple'] .timeline-content:after{
+    background: #6A1B9A !important;
+}
+                        /*animate-progress*/
+[data-default-color='purple'] .animate-progress span{
+    background: #6A1B9A !important;
+}
+
+[data-default-color='purple'] .is-focused [class^=bmd-label] {
+    color: #6A1B9A;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='purple'] .cd-close:hover{
+    color: #6A1B9A;
+    border-color: #6A1B9A;
+}
+[data-default-color='purple'] .cd-item > a b{
+    border-color: #6A1B9A;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='purple'] .carousel-indicators li.active{
+    background: #6A1B9A !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='purple'] .share-buttons i:hover{
+    background: #6A1B9A;
+    border-color: #6A1B9A;
+}
+
+                        /* Form-cotrol */
+[data-default-color='purple'] .form-control{
+background-image: linear-gradient(0deg,#6A1B9A 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+
+
+/************************************INDIGO*******************************************/
+[data-default-color='purple2'] .skin-color{
+    color: #311B92 !important;
+}
+[data-default-color='purple2'] .skin-background{
+    background: #311B92 !important;
+}
+[data-default-color='purple2'] .navigation a:after{
+    background: #311B92 !important;
+}
+                        /*timeline*/
+[data-default-color='purple2'] .timeline-content{
+    border-left: 2px solid #311B92 !important;
+}
+[data-default-color='purple2'] .timeline-content:before{
+    border: 2px solid #311B92 !important;
+}
+[data-default-color='purple2'] .timeline-content:after{
+    background: #311B92 !important;
+}
+                        /*animate-progress*/
+[data-default-color='purple2'] .animate-progress span{
+    background: #311B92 !important;
+}
+
+[data-default-color='purple2'] .is-focused [class^=bmd-label] {
+    color: #311B92;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='purple2'] .cd-close:hover{
+    color: #311B92;
+    border-color: #311B92;
+}
+[data-default-color='purple2'] .cd-item > a b{
+    border-color: #311B92;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='purple2'] .carousel-indicators li.active{
+    background: #311B92 !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='purple2'] .share-buttons i:hover{
+    background: #311B92;
+    border-color: #311B92;
+}
+
+                        /* Form-cotrol */
+[data-default-color='purple2'] .form-control{
+background-image: linear-gradient(0deg,#311B92 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+
+
+/************************************TEAL*******************************************/
+[data-default-color='teal'] .skin-color{
+    color: #20504F !important;
+}
+[data-default-color='teal'] .skin-background{
+    background: #20504F !important;
+}
+[data-default-color='teal'] .navigation a:after{
+    background: #20504F !important;
+}
+                        /*timeline*/
+[data-default-color='teal'] .timeline-content{
+    border-left: 2px solid #20504F !important;
+}
+[data-default-color='teal'] .timeline-content:before{
+    border: 2px solid #20504F !important;
+}
+[data-default-color='teal'] .timeline-content:after{
+    background: #20504F !important;
+}
+                        /*animate-progress*/
+[data-default-color='teal'] .animate-progress span{
+    background: #20504F !important;
+}
+
+[data-default-color='teal'] .is-focused [class^=bmd-label] {
+    color: #20504F;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='teal'] .cd-close:hover{
+    color: #20504F;
+    border-color: #20504F;
+}
+[data-default-color='teal'] .cd-item > a b{
+    border-color: #20504F;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='teal'] .carousel-indicators li.active{
+    background: #20504F !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='teal'] .share-buttons i:hover{
+    background: #20504F;
+    border-color: #20504F;
+}
+
+                        /* Form-cotrol */
+[data-default-color='teal'] .form-control{
+background-image: linear-gradient(0deg,#20504F 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+
+/************************************RED2*******************************************/
+[data-default-color='red2'] .skin-color{
+    color: #F44336 !important;
+}
+[data-default-color='red2'] .skin-background{
+    background: #F44336 !important;
+}
+[data-default-color='red2'] .navigation a:after{
+    background: #F44336 !important;
+}
+                        /*timeline*/
+[data-default-color='red2'] .timeline-content{
+    border-left: 2px solid #F44336 !important;
+}
+[data-default-color='red2'] .timeline-content:before{
+    border: 2px solid #F44336 !important;
+}
+[data-default-color='red2'] .timeline-content:after{
+    background: #F44336 !important;
+}
+                        /*animate-progress*/
+[data-default-color='red2'] .animate-progress span{
+    background: #F44336 !important;
+}
+
+[data-default-color='red2'] .is-focused [class^=bmd-label] {
+    color: #F44336;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='red2'] .cd-close:hover{
+    color: #F44336;
+    border-color: #F44336;
+}
+[data-default-color='red2'] .cd-item > a b{
+    border-color: #F44336;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='red2'] .carousel-indicators li.active{
+    background: #F44336 !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='red2'] .share-buttons i:hover{
+    background: #F44336;
+    border-color: #F44336;
+}
+
+                        /* Form-cotrol */
+[data-default-color='red2'] .form-control{
+background-image: linear-gradient(0deg,#F44336 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+
+
+/************************************UMBER*******************************************/
+[data-default-color='umber'] .skin-color{
+    color: #5D5042 !important;
+}
+[data-default-color='umber'] .skin-background{
+    background: #5D5042 !important;
+}
+[data-default-color='umber'] .navigation a:after{
+    background: #5D5042 !important;
+}
+                        /*timeline*/
+[data-default-color='umber'] .timeline-content{
+    border-left: 2px solid #5D5042 !important;
+}
+[data-default-color='umber'] .timeline-content:before{
+    border: 2px solid #5D5042 !important;
+}
+[data-default-color='umber'] .timeline-content:after{
+    background: #5D5042 !important;
+}
+                        /*animate-progress*/
+[data-default-color='umber'] .animate-progress span{
+    background: #5D5042 !important;
+}
+
+[data-default-color='umber'] .is-focused [class^=bmd-label] {
+    color: #5D5042;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='umber'] .cd-close:hover{
+    color: #5D5042;
+    border-color: #5D5042;
+}
+[data-default-color='umber'] .cd-item > a b{
+    border-color: #5D5042;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='umber'] .carousel-indicators li.active{
+    background: #5D5042 !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='umber'] .share-buttons i:hover{
+    background: #5D5042;
+    border-color: #5D5042;
+}
+
+
+                        /* Form-cotrol */
+[data-default-color='umber'] .form-control{
+background-image: linear-gradient(0deg,#5D5042 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+
+
+
+/************************************RICH*******************************************/
+[data-default-color='rich'] .skin-color{
+    color: #0D0E14 !important;
+}
+[data-default-color='rich'] .skin-background{
+    background: #0D0E14 !important;
+}
+[data-default-color='rich'] .navigation a:after{
+    background: #0D0E14 !important;
+}
+                        /*timeline*/
+[data-default-color='rich'] .timeline-content{
+    border-left: 2px solid #0D0E14 !important;
+}
+[data-default-color='rich'] .timeline-content:before{
+    border: 2px solid #0D0E14 !important;
+}
+[data-default-color='rich'] .timeline-content:after{
+    background: #0D0E14 !important;
+}
+                        /*animate-progress*/
+[data-default-color='rich'] .animate-progress span{
+    background: #0D0E14 !important;
+}
+
+[data-default-color='rich'] .is-focused [class^=bmd-label] {
+    color: #0D0E14;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='rich'] .cd-close:hover{
+    color: #0D0E14;
+    border-color: #0D0E14;
+}
+[data-default-color='rich'] .cd-item > a b{
+    border-color: #0D0E14;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='rich'] .carousel-indicators li.active{
+    background: #0D0E14 !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='rich'] .share-buttons i:hover{
+    background: #0D0E14;
+    border-color: #0D0E14;
+}
+
+                        /* Form-cotrol */
+[data-default-color='rich'] .form-control{
+background-image: linear-gradient(0deg,#0D0E14 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+/************************************ORANGE*******************************************/
+[data-default-color='orange'] .skin-color{
+    color: #FF5722 !important;
+}
+[data-default-color='orange'] .skin-background{
+    background: #FF5722 !important;
+}
+[data-default-color='orange'] .navigation a:after{
+    background: #FF5722 !important;
+}
+                        /*timeline*/
+[data-default-color='orange'] .timeline-content{
+    border-left: 2px solid #FF5722 !important;
+}
+[data-default-color='orange'] .timeline-content:before{
+    border: 2px solid #FF5722 !important;
+}
+[data-default-color='orange'] .timeline-content:after{
+    background: #FF5722 !important;
+}
+                        /*animate-progress*/
+[data-default-color='orange'] .animate-progress span{
+    background: #FF5722 !important;
+}
+
+[data-default-color='orange'] .is-focused [class^=bmd-label] {
+    color: #FF5722;
+}
+                        /*Portfolio-closebutton & button-border*/
+[data-default-color='orange'] .cd-close:hover{
+    color: #FF5722;
+    border-color: #FF5722;
+}
+[data-default-color='orange'] .cd-item > a b{
+    border-color: #FF5722;
+}
+                        /*Portfolio slider indicatiors-bg*/
+[data-default-color='orange'] .carousel-indicators li.active{
+    background: #FF5722 !important;
+}
+                        /*Portfolio icons:hover*/
+[data-default-color='orange'] .share-buttons i:hover{
+    background: #FF5722;
+    border-color: #FF5722;
+}
+
+                        /* Form-cotrol */
+[data-default-color='orange'] .form-control{
+background-image: linear-gradient(0deg,#FF5722 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
+
+
+
+
+
+/*Default color class*/
+.def-c{
+    color: #2196f3;
+}
+.def-b{
+    background: #2196f3;
+}

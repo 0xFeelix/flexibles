@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Roboto-regular';
+  src: local('Roboto-regular'), url(fonts/roboto-regular.ttf) format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-medium';
+  src: local('Roboto-medium'), url(fonts/roboto-medium.ttf) format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-bold';
+  src: local('Roboto-bold'), url(fonts/roboto-bold.ttf) format('opentype');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Monsterrat';
+  src: local('Monsterrat'), url(fonts/Montserrat-Bold.ttf) format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monsterrat-regular"';
+  src: local('Monsterrat-regular"'), url(fonts/Montserrat-Regular.ttf) format('opentype');
+  font-display: swap;
+}
