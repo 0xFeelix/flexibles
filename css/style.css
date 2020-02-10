@@ -2,7 +2,7 @@
 @import url(fonts.css);
 @import url(color-switcher.css);
 @import url(media.css);
-@import url(portfolio.css.css);
+@import url(portfolio.css);
 body{
     background: #f5f5f5 !important;
 }
@@ -35,21 +35,6 @@ body{
 }
 
 
-
-
-/*
-I)
-    1.Header[menu-navigation]
-      1.2(nav-links-active)
-      1.3(nav-fixed-menu)
-    2.Home-content
-      2.1(h_content-top)
-      2.2(h_content-bottom)
-    3.Footer
-
-II)
-    1.Resume
-*/
 
 
 /*1.Header[menu-navigation]*/
@@ -389,6 +374,9 @@ header{
     font-family: 'Monsterrat';
     font-size: 13px;
 }
+
+
+
 
 /*Google map*/
 #map{
