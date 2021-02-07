@@ -1,1 +1,1 @@
-https://xct.netlify.com/
+https://xct.netlify.app/
