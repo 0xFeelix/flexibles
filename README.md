@@ -1,1 +1,1 @@
-https://flexibles.netlify.com/
+https://xct.netlify.com/
