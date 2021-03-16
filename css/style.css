@@ -166,6 +166,7 @@ header{
     border-radius: 50%;
     background: #ffffff;
 }
+
 .h_content-title .social-links i{
     line-height: 36px;
 }
@@ -217,7 +218,9 @@ header{
 .info-list .value{
     color: #9e9e9e
 }
-
+.gmail:hover{
+  text-decoration: underline !important;
+}
 
 
 
